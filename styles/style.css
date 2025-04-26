@@ -1,0 +1,255 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --branco-primeiro: #ffffff;
+  --branco-segundo: #f9f9f9;
+  --cinza-primeiro: #c0c0c0;
+  --preto-comboalura: #040814;
+  --preto-fundo: #00030c;
+  --azul-primeiro: #167bf7;
+  --font-principal: "inter", sans-serif;
+  --font-mininma-observacao: 75%; /*font 12px*/
+  --font-minuscula: 87.5%; /*font 14px*/
+  --font-pequena: 100%; /*font 16px*/
+  --font-media: 175%; /*font 28px*/
+  --font-grande: 200%; /*font 32px*/
+  --font-gigante: 300%; /*font 48px*/
+  --cor-hover-botao: #48d6f6fa; 
+  --cor-font-botao: #000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  background-color: var(--preto-fundo);
+  color: var(--branco-primeiro);
+  font-family: var(--font-principal);
+  font-size: var(--font-pequena);
+  font-weight: 400;
+}
+
+.principal {
+  background-image: url("../img/Background.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-align: center;
+  align-items: center;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 2em;
+  gap: 2em;
+  /* display: grid; */
+  /* grid-template-columns: 50% 50%; */
+}
+
+.secundario, .terceiro, .quarto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  margin: 2em;
+}
+
+
+.container__botao:hover { 
+  background-color: var(--cor-hover-botao);
+  color: var(--cor-font-botao);
+}
+
+.container__botao {
+  background-color: var(--azul-primeiro);
+  padding: 1em;
+  border-radius: 8px;
+  display: block;
+  text-decoration: none;
+  color: var(--branco-primeiro);
+  font-size: var(--font-pequena);
+  font-weight: 400;
+  font-family: var(--font-principal);
+  margin-bottom: 1em;
+}
+
+.botao_secundario {
+  border: 2px solid var(--branco-primeiro);
+  background-color: transparent;
+}
+
+.container_aviso {
+  font-size: var(--font-mininma-observacao);
+  color: var(--cinza-primeiro);
+}
+
+.texto_principal {
+  font-size: var(--font-media);
+  font-weight: 700;
+}
+
+.container__image {
+  margin: 1em 0 2em 0;
+}
+
+.container__caixa {
+  margin: 0 6em;
+}
+
+.image_alura {
+  width: 35%;
+}
+
+/* .secundario { 
+  align-items: center;
+  margin-left: 10.31em;
+  margin-right: 7.5em;
+}*/
+
+.container_descricao {
+  width: 588px;
+}
+
+.descricao_titulo {
+  font-size: var(--font-gigante);
+  font-weight: 700;
+  margin-bottom: 0.2em;
+}
+
+.descricao_texto {
+  font-size: var(--font-pequena);
+  color: var(--branco-segundo);
+  text-align: left;
+}
+
+.botao_terceiro {
+  width: fit-content; /* serviria o display:inline-block; width: fit-content;*/
+  text-align: center;
+  margin-top: 1em;
+}
+
+/* .terceiro {
+  align-items: center;
+  margin-left: 7.5em;
+  margin-right: 10.31em;
+}
+
+ .quarto {
+  align-items: center;
+  margin-left: 8.81em;
+  margin-right: 7.5em;
+}*/
+
+.dispositivos__lista {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 5em 0em;
+}
+
+.dispositivos {
+  text-align: center;
+}
+
+.dispositivos__titulo {
+  font-size: var(--font-gigante);
+  font-weight: 700;
+}
+
+.sub_icones {
+  font-size: var(--font-grande);
+  font-weight: 700;
+}
+
+.rodape {
+  width: auto;
+  text-align: center;
+  margin: 1em;
+}
+
+.rodape_lista {
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.rodape_links {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  list-style-type: none;
+}
+
+.links_internos {
+  text-decoration: none;
+  color: var(--branco-primeiro);
+  font-size: var(--font-pequena);
+}
+
+.rodape_descricao {
+  font-size: var(--font-minuscula);
+  color: var(--cinza-primeiro);
+  margin-top: 1.5em;
+  margin-bottom: 4em;
+}
+
+.links_internos:hover{
+  color: #ec2f46;
+}
+
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 2em 1em;
+  }
+
+  .container__caixa {
+    margin: 0 2em;
+  }
+
+  .secundario,
+  .terceiro,
+  .quarto {
+    flex-direction: column;
+    text-align: center;
+    margin: 2em 1em;
+  }
+
+  .container_descricao {
+    width: 100%;
+  }
+
+  .image_alura {
+    width: 75%;
+  }
+
+  .dispositivos__lista {
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .rodape_links {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .descricao_titulo {
+    font-size: var(--font-grande);
+  }
+
+  .descricao_texto {
+    font-size: var(--font-minuscula);
+  }
+}
